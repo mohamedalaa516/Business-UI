@@ -1,24 +1,19 @@
-#include <SFML/Graphics.hpp>
-
+﻿#include <SFML/Graphics.hpp>
 #include "imgui.h"
 #include "imgui-SFML.h"
 
 #include <map>
-#include<iostream>
 #include <string>
 #include "Person.h"
 
 using namespace std;
 
 int main() {
-    unsigned int width = 640;
-    unsigned int height = 360;
-    sf::RenderWindow window(sf::VideoMode(width, height), "Seller System GUI");
-
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Seller System GUI");
     window.setFramerateLimit(60);
     ImGui::SFML::Init(window);
 
-
+    // Data
     map<string, Seller> HashSeller;
     char nameInput[128] = "";
     int amountInput = 0;
@@ -28,30 +23,52 @@ int main() {
     int menuChoice = 0;
 
     sf::Clock deltaClock;
+
     while (window.isOpen()) {
+        // ---------------- Event Loop ----------------
         sf::Event event;
         while (window.pollEvent(event)) {
             ImGui::SFML::ProcessEvent(event);
-
-            if (event.type == sf::Event::Closed) {
+            if (event.type == sf::Event::Closed)
                 window.close();
-            }
         }
 
+        // ---------------- Update ImGui ----------------
         ImGui::SFML::Update(window, deltaClock.restart());
 
-        ImGui::Begin("Main Menu");
+        // ---------------- Main Menu Window ----------------
+        ImGui::SetNextWindowPos(ImVec2(0, 0));
+        ImGui::SetNextWindowSize(ImVec2(window.getSize().x, window.getSize().y));
+        ImGui::Begin("Main Menu", nullptr,
+            ImGuiWindowFlags_NoResize |
+            ImGuiWindowFlags_NoMove |
+            ImGuiWindowFlags_NoCollapse |
+            ImGuiWindowFlags_NoTitleBar);  // شاشة كاملة بدون عنوان
 
         if (menuChoice == 0) {
-            if (ImGui::Button("Accountant")) {
-                menuChoice = 1;
-            }
-            if (ImGui::Button("Seller")) {
-                menuChoice = 2;
-            }
-            if (ImGui::Button("Exit")) {
-                window.close();
-            }
+            // ألوان وتنسيق الأزرار
+            ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.0f, 0.5f, 1.0f, 1.0f));
+            ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.0f, 0.7f, 1.0f, 1.0f));
+            ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.0f, 0.3f, 0.7f, 1.0f));
+            ImGui::PushStyleVar(ImGuiStyleVar_FrameRounding, 10.0f);
+            ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(20, 10));
+
+            ImVec2 buttonSize(300, 80);
+
+            float centerX = (ImGui::GetWindowSize().x - buttonSize.x) * 0.5f;
+            float centerY = (ImGui::GetWindowSize().y - (buttonSize.y * 3 + 20 * 2)) * 0.5f;
+
+            ImGui::SetCursorPos(ImVec2(centerX, centerY));
+            if (ImGui::Button("Accountant", buttonSize)) menuChoice = 1;
+
+            ImGui::SetCursorPos(ImVec2(centerX, ImGui::GetCursorPosY() + 20));
+            if (ImGui::Button("Seller", buttonSize)) menuChoice = 2;
+
+            ImGui::SetCursorPos(ImVec2(centerX, ImGui::GetCursorPosY() + 20));
+            if (ImGui::Button("Exit", buttonSize)) window.close();
+
+            ImGui::PopStyleVar(2);
+            ImGui::PopStyleColor(3);
         }
         else if (menuChoice == 1) {
             ImGui::InputText("Name", nameInput, sizeof(nameInput));
@@ -65,12 +82,9 @@ int main() {
                 s.setAmount(amountInput);
                 Seller::Goods g = (productChoice == 1) ? Seller::Goods::MohamedAttia : Seller::Goods::NasrAbdelWanes;
                 s.setGoods(g);
-
                 HashSeller[nameInput] = s;
             }
-            if (ImGui::Button("Back")) {
-                menuChoice = 0;
-            }
+            if (ImGui::Button("Back")) menuChoice = 0;
         }
         else if (menuChoice == 2) {
             ImGui::InputText("Enter your name", currentSeller, sizeof(currentSeller));
@@ -109,15 +123,18 @@ int main() {
 
                 ImGui::Text("Remaining total: %d", s.getTotalPay());
             }
+
+            if (ImGui::Button("Back")) menuChoice = 0;
         }
 
-        ImGui::End();
+        ImGui::End(); // End Main Menu
 
-        window.clear();
+        // ---------------- Render ----------------
+        window.clear(sf::Color::White);
         ImGui::SFML::Render(window);
         window.display();
     }
 
     ImGui::SFML::Shutdown();
-
+    return 0;
 }
