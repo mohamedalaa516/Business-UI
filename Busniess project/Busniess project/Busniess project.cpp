@@ -13,6 +13,16 @@ int main() {
     window.setFramerateLimit(60);
     ImGui::SFML::Init(window);
 
+
+    //background
+    sf::Texture texture;
+    texture.loadFromFile("asset/atm.jpg");
+    sf::Sprite sprite(texture);
+    sprite.setScale(
+        static_cast<float>(window.getSize().x) / texture.getSize().x,
+        static_cast<float>(window.getSize().y) / texture.getSize().y
+    );
+
     // Data
     map<string, Seller> HashSeller;
     char nameInput[128] = "";
@@ -39,11 +49,15 @@ int main() {
         // ---------------- Main Menu Window ----------------
         ImGui::SetNextWindowPos(ImVec2(0, 0));
         ImGui::SetNextWindowSize(ImVec2(window.getSize().x, window.getSize().y));
-        ImGui::Begin("Main Menu", nullptr,
+
+
+
+        ImGui::Begin("Buttons", nullptr,
+            ImGuiWindowFlags_NoTitleBar |
             ImGuiWindowFlags_NoResize |
             ImGuiWindowFlags_NoMove |
-            ImGuiWindowFlags_NoCollapse |
-            ImGuiWindowFlags_NoTitleBar);  // شاشة كاملة بدون عنوان
+            ImGuiWindowFlags_AlwaysAutoResize |
+            ImGuiWindowFlags_NoBackground);  // 👈 من غير خلفية
 
         if (menuChoice == 0) {
             // ألوان وتنسيق الأزرار
@@ -130,7 +144,8 @@ int main() {
         ImGui::End(); // End Main Menu
 
         // ---------------- Render ----------------
-        window.clear(sf::Color::White);
+        window.clear(sf::Color::Black);
+        window.draw(sprite);
         ImGui::SFML::Render(window);
         window.display();
     }
