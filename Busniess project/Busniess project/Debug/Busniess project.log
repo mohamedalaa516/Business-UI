@@ -1,14 +1,14 @@
 ﻿  Busniess project.cpp
-D:\Test\Busniess project\Busniess project\Busniess project.cpp(51,77): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-D:\Test\Busniess project\Busniess project\Busniess project.cpp(51,77): warning C4244:         with
-D:\Test\Busniess project\Busniess project\Busniess project.cpp(51,77): warning C4244:         [
-D:\Test\Busniess project\Busniess project\Busniess project.cpp(51,77): warning C4244:             T=unsigned int
-D:\Test\Busniess project\Busniess project\Busniess project.cpp(51,77): warning C4244:         ]
-D:\Test\Busniess project\Busniess project\Busniess project.cpp(51,57): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-D:\Test\Busniess project\Busniess project\Busniess project.cpp(51,57): warning C4244:         with
-D:\Test\Busniess project\Busniess project\Busniess project.cpp(51,57): warning C4244:         [
-D:\Test\Busniess project\Busniess project\Busniess project.cpp(51,57): warning C4244:             T=unsigned int
-D:\Test\Busniess project\Busniess project\Busniess project.cpp(51,57): warning C4244:         ]
+D:\Test\Busniess project\Busniess project\Busniess project.cpp(72,77): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+D:\Test\Busniess project\Busniess project\Busniess project.cpp(72,77): warning C4244:         with
+D:\Test\Busniess project\Busniess project\Busniess project.cpp(72,77): warning C4244:         [
+D:\Test\Busniess project\Busniess project\Busniess project.cpp(72,77): warning C4244:             T=unsigned int
+D:\Test\Busniess project\Busniess project\Busniess project.cpp(72,77): warning C4244:         ]
+D:\Test\Busniess project\Busniess project\Busniess project.cpp(72,57): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+D:\Test\Busniess project\Busniess project\Busniess project.cpp(72,57): warning C4244:         with
+D:\Test\Busniess project\Busniess project\Busniess project.cpp(72,57): warning C4244:         [
+D:\Test\Busniess project\Busniess project\Busniess project.cpp(72,57): warning C4244:             T=unsigned int
+D:\Test\Busniess project\Busniess project\Busniess project.cpp(72,57): warning C4244:         ]
 sfml-graphics-s-d.lib(BlendMode.obj) : warning LNK4099: PDB 'sfml-graphics-s.pdb' was not found with 'sfml-graphics-s-d.lib(BlendMode.obj)' or at 'D:\Test\Busniess project\Debug\sfml-graphics-s.pdb'; linking object as if no debug info
 sfml-graphics-s-d.lib(Color.obj) : warning LNK4099: PDB 'sfml-graphics-s.pdb' was not found with 'sfml-graphics-s-d.lib(Color.obj)' or at 'D:\Test\Busniess project\Debug\sfml-graphics-s.pdb'; linking object as if no debug info
 sfml-graphics-s-d.lib(Glsl.obj) : warning LNK4099: PDB 'sfml-graphics-s.pdb' was not found with 'sfml-graphics-s-d.lib(Glsl.obj)' or at 'D:\Test\Busniess project\Debug\sfml-graphics-s.pdb'; linking object as if no debug info
@@ -31,13 +31,13 @@ sfml-graphics-s-d.lib(Sprite.obj) : warning LNK4099: PDB 'sfml-graphics-s.pdb' w
 sfml-graphics-s-d.lib(VertexBuffer.obj) : warning LNK4099: PDB 'sfml-graphics-s.pdb' was not found with 'sfml-graphics-s-d.lib(VertexBuffer.obj)' or at 'D:\Test\Busniess project\Debug\sfml-graphics-s.pdb'; linking object as if no debug info
 sfml-graphics-s-d.lib(RenderTextureImpl.obj) : warning LNK4099: PDB 'sfml-graphics-s.pdb' was not found with 'sfml-graphics-s-d.lib(RenderTextureImpl.obj)' or at 'D:\Test\Busniess project\Debug\sfml-graphics-s.pdb'; linking object as if no debug info
 sfml-graphics-s-d.lib(RenderTextureImplFBO.obj) : warning LNK4099: PDB 'sfml-graphics-s.pdb' was not found with 'sfml-graphics-s-d.lib(RenderTextureImplFBO.obj)' or at 'D:\Test\Busniess project\Debug\sfml-graphics-s.pdb'; linking object as if no debug info
-sfml-graphics-s-d.lib(RenderTextureImplDefault.obj) : warning LNK4099: PDB 'sfml-graphics-s.pdb' was not found with 'sfml-graphics-s-d.lib(RenderTextureImplDefault.obj)' or at 'D:\Test\Busniess project\Debug\sfml-graphics-s.pdb'; linking object as if no debug info
+sfml-graphics-s-d.lib(RenderTextureImplDefault.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(RenderTextureImplDefault.obj)' or at ''; linking object as if no debug info
 sfml-main-d.lib(MainWin32.obj) : warning LNK4099: PDB 'sfml-main-s.pdb' was not found with 'sfml-main-d.lib(MainWin32.obj)' or at 'D:\Test\Busniess project\Debug\sfml-main-s.pdb'; linking object as if no debug info
 sfml-window-s-d.lib(Clipboard.obj) : warning LNK4099: PDB 'sfml-window-s.pdb' was not found with 'sfml-window-s-d.lib(Clipboard.obj)' or at 'D:\Test\Busniess project\Debug\sfml-window-s.pdb'; linking object as if no debug info
 sfml-window-s-d.lib(Context.obj) : warning LNK4099: PDB 'sfml-window-s.pdb' was not found with 'sfml-window-s-d.lib(Context.obj)' or at 'D:\Test\Busniess project\Debug\sfml-window-s.pdb'; linking object as if no debug info
 sfml-window-s-d.lib(Cursor.obj) : warning LNK4099: PDB 'sfml-window-s.pdb' was not found with 'sfml-window-s-d.lib(Cursor.obj)' or at 'D:\Test\Busniess project\Debug\sfml-window-s.pdb'; linking object as if no debug info
 sfml-window-s-d.lib(GlContext.obj) : warning LNK4099: PDB 'sfml-window-s.pdb' was not found with 'sfml-window-s-d.lib(GlContext.obj)' or at 'D:\Test\Busniess project\Debug\sfml-window-s.pdb'; linking object as if no debug info
-sfml-window-s-d.lib(GlResource.obj) : warning LNK4099: PDB 'sfml-window-s.pdb' was not found with 'sfml-window-s-d.lib(GlResource.obj)' or at 'D:\Test\Busniess project\Debug\sfml-window-s.pdb'; linking object as if no debug info
+sfml-window-s-d.lib(GlResource.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(GlResource.obj)' or at ''; linking object as if no debug info
 sfml-window-s-d.lib(Joystick.obj) : warning LNK4099: PDB 'sfml-window-s.pdb' was not found with 'sfml-window-s-d.lib(Joystick.obj)' or at 'D:\Test\Busniess project\Debug\sfml-window-s.pdb'; linking object as if no debug info
 sfml-window-s-d.lib(JoystickManager.obj) : warning LNK4099: PDB 'sfml-window-s.pdb' was not found with 'sfml-window-s-d.lib(JoystickManager.obj)' or at 'D:\Test\Busniess project\Debug\sfml-window-s.pdb'; linking object as if no debug info
 sfml-window-s-d.lib(Mouse.obj) : warning LNK4099: PDB 'sfml-window-s.pdb' was not found with 'sfml-window-s-d.lib(Mouse.obj)' or at 'D:\Test\Busniess project\Debug\sfml-window-s.pdb'; linking object as if no debug info
@@ -65,9 +65,9 @@ sfml-system-s-d.lib(String.obj) : warning LNK4099: PDB 'sfml-system-s.pdb' was n
 sfml-system-s-d.lib(ThreadLocal.obj) : warning LNK4099: PDB 'sfml-system-s.pdb' was not found with 'sfml-system-s-d.lib(ThreadLocal.obj)' or at 'D:\Test\Busniess project\Debug\sfml-system-s.pdb'; linking object as if no debug info
 sfml-system-s-d.lib(Time.obj) : warning LNK4099: PDB 'sfml-system-s.pdb' was not found with 'sfml-system-s-d.lib(Time.obj)' or at 'D:\Test\Busniess project\Debug\sfml-system-s.pdb'; linking object as if no debug info
 sfml-system-s-d.lib(ClockImpl.obj) : warning LNK4099: PDB 'sfml-system-s.pdb' was not found with 'sfml-system-s-d.lib(ClockImpl.obj)' or at 'D:\Test\Busniess project\Debug\sfml-system-s.pdb'; linking object as if no debug info
-sfml-system-s-d.lib(MutexImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(MutexImpl.obj)' or at ''; linking object as if no debug info
+sfml-system-s-d.lib(MutexImpl.obj) : warning LNK4099: PDB 'sfml-system-s.pdb' was not found with 'sfml-system-s-d.lib(MutexImpl.obj)' or at 'D:\Test\Busniess project\Debug\sfml-system-s.pdb'; linking object as if no debug info
 sfml-system-s-d.lib(SleepImpl.obj) : warning LNK4099: PDB 'sfml-system-s.pdb' was not found with 'sfml-system-s-d.lib(SleepImpl.obj)' or at 'D:\Test\Busniess project\Debug\sfml-system-s.pdb'; linking object as if no debug info
-sfml-system-s-d.lib(ThreadLocalImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(ThreadLocalImpl.obj)' or at ''; linking object as if no debug info
+sfml-system-s-d.lib(ThreadLocalImpl.obj) : warning LNK4099: PDB 'sfml-system-s.pdb' was not found with 'sfml-system-s-d.lib(ThreadLocalImpl.obj)' or at 'D:\Test\Busniess project\Debug\sfml-system-s.pdb'; linking object as if no debug info
   Busniess project.vcxproj -> D:\Test\Busniess project\Debug\Busniess project.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

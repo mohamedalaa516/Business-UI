@@ -12,7 +12,28 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Seller System GUI");
     window.setFramerateLimit(60);
     ImGui::SFML::Init(window);
+    //==============================================================//
+    ImGui::StyleColorsDark(); 
+    ImGuiStyle& style = ImGui::GetStyle();
+    ImVec4* colors = style.Colors;
+    // الخلفية تبقى شفافة
+    colors[ImGuiCol_WindowBg] = ImVec4(0, 0, 0, 0);
+    colors[ImGuiCol_ChildBg] = ImVec4(0, 0, 0, 0);
+    colors[ImGuiCol_PopupBg] = ImVec4(0, 0, 0, 0.8f);
 
+    // النص أبيض
+    colors[ImGuiCol_Text] = ImVec4(1, 1, 1, 1);
+
+    // InputText خلفية شفافة وحدود فاتحة
+    colors[ImGuiCol_FrameBg] = ImVec4(0, 0, 0, 0.5f);
+    colors[ImGuiCol_FrameBgHovered] = ImVec4(0.2f, 0.2f, 0.2f, 0.7f);
+    colors[ImGuiCol_FrameBgActive] = ImVec4(0.3f, 0.3f, 0.3f, 0.9f);
+
+    // زرار بلون أزرق فاتح
+    colors[ImGuiCol_Button] = ImVec4(0.1f, 0.5f, 0.9f, 0.9f);
+    colors[ImGuiCol_ButtonHovered] = ImVec4(0.2f, 0.6f, 1.0f, 1.0f);
+    colors[ImGuiCol_ButtonActive] = ImVec4(0.05f, 0.3f, 0.6f, 1.0f);
+    //=====================================================================//
 
     //background
     sf::Texture texture;
