@@ -11,18 +11,17 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      # خطوة 1: جلب الكود من الريبو
       - uses: actions/checkout@v4
 
-      - name: Cache build outputs
-        uses: actions/cache@v4
-        with:
-          path: build
-          key: ${{ runner.os }}-build-${{ hashFiles('**/*.sln') }}
-          restore-keys: |
-            ${{ runner.os }}-build-
+      # خطوة 2: تجهير MSBuild على الـ PATH
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
 
+      # خطوة 3: Build المشروع
       - name: Build Solution
-        run: msbuild path\to\YourProject.sln /p:Configuration=Release
+        run: msbuild "D:\Test\Busniess project\Busniess project.sln" /p:Configuration=Release
 
+      # خطوة 4 (اختياري): تشغيل الاختبارات لو عندك
       - name: Run Tests
         run: path\to\your_tests.exe
